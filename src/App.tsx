@@ -116,15 +116,15 @@ export interface Props {
   value: React.ReactNode;
 }
 
-const Item = forwardRef<HTMLLIElement, Props>(({ value, ...props }, ref) => {
+const Item = forwardRef<HTMLDivElement, Props>(({ value, ...props }, ref) => {
   return (
-    <li
+    <div
       ref={ref}
       className="flex items-center justify-center list-none border size-20"
       {...props}
     >
       {value}
-    </li>
+    </div>
   );
 });
 
